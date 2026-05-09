@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LyvStreem — Offline</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      min-height: 100vh;
+      background: #0a0a0f;
+      color: white;
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      text-align: center;
+    }
+    .logo {
+      width: 80px; height: 80px; border-radius: 20px;
+      background: linear-gradient(135deg, #d946ef, #7c3aed);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 24px;
+      font-size: 36px;
+    }
+    h1 { font-size: 28px; font-weight: 800; margin-bottom: 12px; }
+    .subtitle { color: rgba(255,255,255,0.5); font-size: 15px; max-width: 300px; line-height: 1.6; }
+    .retry {
+      margin-top: 32px;
+      background: linear-gradient(135deg, #d946ef, #7c3aed);
+      color: white;
+      border: none;
+      padding: 14px 32px;
+      border-radius: 999px;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+    .retry:hover { opacity: 0.85; }
+    .pulse { animation: pulse 2s ease-in-out infinite; }
+    @keyframes pulse {
+      0%,100% { opacity: 0.6; }
+      50% { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="logo">📡</div>
+  <h1>You're Offline</h1>
+  <p class="subtitle pulse">
+    LyvStreem needs an internet connection to stream, chat and send gifts.<br/><br/>
+    Check your connection and try again.
+  </p>
+  <button class="retry" onclick="window.location.reload()">Try Again</button>
+</body>
+</html>
